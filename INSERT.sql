@@ -33,6 +33,6 @@ select s.report_date as date,
     r.restaurant_uuid as restaurant_uuid,
     s.avg_check as avg_check
 from raw_data.sales as s
-join cafe.restaurants as r
+inner join cafe.restaurants as r
   on s.cafe_name = r.restaurant_name
 ;
